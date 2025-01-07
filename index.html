@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Frontend Mento | Mortgage Repayment Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="box1">
+        <header>
+          <h3>Mortgage Calculator</h3>
+          <small id="clear">Clear All</small>
+        </header>
+
+        <form id="form">
+          <fieldset class="input-box">
+            <label for="amount">Mortgage Amount</label>
+            <div class="input-brd">
+              <span class="sym">$</span>
+              <input
+                type="text"
+                name="amount"
+                autocomplete="off"
+                inputmode="numeric"
+              />
+            </div>
+            <small class="req">This field is required</small>
+          </fieldset>
+
+          <div class="term-rate">
+            <fieldset class="input-box">
+              <label for="term">Mortgage Term</label>
+              <div class="input-brd">
+                <input type="number" name="term" />
+                <span class="sym">years</span>
+              </div>
+              <small class="req">This field is required</small>
+            </fieldset>
+
+            <fieldset class="input-box">
+              <label for="rate">Interest Rate</label>
+              <div class="input-brd">
+                <input type="number" name="rate" step="0.01" />
+                <span class="sym">%</span>
+              </div>
+              <small class="req">This field is required</small>
+            </fieldset>
+          </div>
+
+          <fieldset class="input-box">
+            <label for="type">Mortgage Type</label>
+            <div class="mtg-type">
+              <input type="radio" name="type" value="repayment" />
+              <span>Repayment</span>
+            </div>
+            <div class="mtg-type">
+              <input type="radio" name="type" value="interest-only" />
+              <span>Interest Only</span>
+            </div>
+            <small class="req">This field is required</small>
+          </fieldset>
+
+          <button class="btn" type="submit">
+            <img src="./images/icon-calculator.svg" alt="" />
+            <span>Calculate Repayments</span>
+          </button>
+        </form>
+      </section>
+
+      <section class="box2">
+        <div class="empty">
+          <img src="./images/illustration-empty.svg" alt="" />
+          <div>
+            <h3>Results shown here</h3>
+            <p>
+              Complete the form and click "calculate repayments" to see what
+              your monthly repayments would be.
+            </p>
+          </div>
+        </div>
+
+        <div class="filled none">
+          <h3>Your results</h3>
+          <div class="info">
+            <small
+              >Your results are shown below based on the information you
+              provided. To adjust the results, edit the form and click
+              "calculate repayments" again</small
+            >
+
+            <div class="results">
+              <div class="d1">
+                <small>Your monthly repayments</small>
+                <span class="month"></span>
+              </div>
+              <hr />
+              <div class="d2">
+                <small>Total you'll repay over the term</small>
+                <span class="total"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!---======================= SECTION FOOTER =========================-->
+
+    <div class="credits">
+      <footer>
+        Challenge by
+        <a href="https://www.frontendmentor.io/home" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/Mathheus7" target="_blank"
+          >Mattheus7</a
+        >.
+      </footer>
+    </div>
+
+    <!---======================= JS =========================-->
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
