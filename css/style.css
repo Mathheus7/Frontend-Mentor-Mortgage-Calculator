@@ -102,7 +102,7 @@ fieldset {
     color: hsl(0, 0%, 100%);
 }
 
-.req {
+.error {
     color: hsl(4, 69%, 50%);
     display: none;
 }
